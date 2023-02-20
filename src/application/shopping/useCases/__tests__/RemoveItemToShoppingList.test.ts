@@ -17,7 +17,7 @@ describe("RemoveItemsToShoppingListUseCase", () => {
     await expect(promise).rejects.toThrowError(ShoppingListMissing);
   });
 
-  it("should add the new item", async () => {
+  it("should revome an item", async () => {
     const { useCase, shoppingListGateway, item } = setup();
 
     await useCase.execute({
