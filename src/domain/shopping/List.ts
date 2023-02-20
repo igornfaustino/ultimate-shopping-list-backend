@@ -48,4 +48,8 @@ export class ShoppingList extends Entity {
   uncheckAll() {
     this.items.forEach((item) => item.uncheck());
   }
+
+  getItem(id: string) {
+    return this.items.find((item) => item.id === id) ?? null;
+  }
 }
