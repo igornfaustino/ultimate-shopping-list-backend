@@ -38,4 +38,12 @@ export class ShoppingList extends Entity {
   remove(id: string) {
     this.items = this.items.filter((item) => item.id !== id);
   }
+
+  checkAll() {
+    this.items.forEach((item) => item.check());
+  }
+
+  uncheckAll() {
+    this.items.forEach((item) => item.uncheck());
+  }
 }

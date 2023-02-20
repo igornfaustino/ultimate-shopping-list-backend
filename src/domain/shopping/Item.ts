@@ -54,4 +54,12 @@ export class ShoppingItem extends Entity {
   toggle() {
     this.checked = !this.checked;
   }
+
+  check() {
+    this.checked = true;
+  }
+
+  uncheck() {
+    this.checked = false;
+  }
 }
