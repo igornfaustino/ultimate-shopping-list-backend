@@ -9,6 +9,16 @@
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^29.4.3",
     "ts-jest": "^29.0.5",
+    "ts-node-dev": "^2.0.0",
     "typescript": "*"
+  },
+  "name": "ultimate-shopping-list-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "igornfaustino <igor@nfaustino.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules src/index.ts",
+    "test": "jest"
   }
 }
