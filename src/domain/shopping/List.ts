@@ -32,7 +32,9 @@ export class ShoppingList extends Entity {
   }
 
   add(item: ShoppingItem) {
-    this.items.push(item);
+    const listItem = this.items.find((listItem) => listItem.id === item.id);
+    if (!listItem) return this.items.push(item);
+    listItem.quantity += item.quantity;
   }
 
   remove(id: string) {
