@@ -1,5 +1,5 @@
 import { ShoppingList } from "../../../domain/shopping/List";
-import { ShoppingListGateway } from "../../shared/gateways/ShoppingListGateway";
+import { ShoppingListGateway } from "../gateways/ShoppingListGateway";
 import { UseCase } from "../../shared/useCases/UseCase";
 
 export class CreateShoppingListUseCase

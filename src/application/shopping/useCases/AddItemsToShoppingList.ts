@@ -1,5 +1,5 @@
 import { ShoppingItem } from "../../../domain/shopping/Item";
-import { ShoppingListGateway } from "../../shared/gateways/ShoppingListGateway";
+import { ShoppingListGateway } from "../gateways/ShoppingListGateway";
 import { UseCase } from "../../shared/useCases/UseCase";
 import { ShoppingListMissing } from "../errors/ShoppingListMissing";
 
