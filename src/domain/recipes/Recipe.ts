@@ -13,15 +13,16 @@ export class Recipe extends Entity {
   }
 
   static create(name: string): Recipe;
+  static create(name: string, howToPrepare: string): Recipe;
   static create(
     name: string,
-    ingredients: RecipeItem[],
-    howToPrepare: string
+    howToPrepare: string,
+    ingredients: RecipeItem[]
   ): Recipe;
   static create(
     name: string,
-    ingredients: RecipeItem[] = [],
-    howToPrepare: string = ""
+    howToPrepare: string = "",
+    ingredients: RecipeItem[] = []
   ) {
     return new Recipe(name, ingredients, howToPrepare);
   }
@@ -30,14 +31,14 @@ export class Recipe extends Entity {
   static instantiate(
     id: string,
     name: string,
-    ingredients: RecipeItem[],
-    howToPrepare: string
+    howToPrepare: string,
+    ingredients: RecipeItem[]
   ): Recipe;
   static instantiate(
     id: string,
     name: string,
-    ingredients: RecipeItem[] = [],
-    howToPrepare: string = ""
+    howToPrepare: string = "",
+    ingredients: RecipeItem[] = []
   ) {
     return new Recipe(name, ingredients, howToPrepare, id);
   }

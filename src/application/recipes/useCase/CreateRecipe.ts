@@ -11,7 +11,7 @@ export class CreateRecipeUseCase implements UseCase<Input, Promise<Output>> {
   ) {}
 
   async execute(input: Input): Promise<Output> {
-    const recipe = Recipe.create(input.name);
+    const recipe = Recipe.create(input.name, input.howToPrepare);
     for (const { id, quantity } of input.ingredients) {
       const ingredient = await this.ingredientGateway.getById(id);
       if (!ingredient) throw new MissingIngredient(id);
@@ -24,6 +24,7 @@ export class CreateRecipeUseCase implements UseCase<Input, Promise<Output>> {
 
 type Input = {
   name: string;
+  howToPrepare: string;
   ingredients: {
     id: string;
     quantity: number;

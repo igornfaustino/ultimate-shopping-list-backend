@@ -10,6 +10,7 @@ describe("CreateRecipeUseCase", () => {
 
     const promise = useCase.execute({
       name: "Fried rice",
+      howToPrepare: "Fry the rice on low heat",
       ingredients: [
         {
           id: "any id",
@@ -27,6 +28,7 @@ describe("CreateRecipeUseCase", () => {
 
     await useCase.execute({
       name: "Fried rice",
+      howToPrepare: "Fry the rice on low heat",
       ingredients: [
         {
           id: "any id",
@@ -40,6 +42,7 @@ describe("CreateRecipeUseCase", () => {
     expect(savedRecipe.ingredients[0].ingredientId).toBe("any id");
     expect(savedRecipe.ingredients[0].name).toBe(ingredient.name);
     expect(savedRecipe.ingredients[0].quantity).toBe(500);
+    expect(savedRecipe.howToPrepare).toBe("Fry the rice on low heat");
   });
 
   const setup = () => {
